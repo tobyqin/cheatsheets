@@ -24,6 +24,7 @@ exclude:
   - node_modules
   - Dockerfile
   - docker_compose.yml
+  - pending
 
 # Markdown
 

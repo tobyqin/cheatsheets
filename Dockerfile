@@ -1,19 +1,8 @@
-# docker build -t devhint:2.0 .
-# docker run -it -v `pwd`:/app -p 4003:4000  devhint:2.0 
+# docker build -t tobyqin/devhints:latest .
+# docker run --rm -it -v `pwd`:/app -p 4000:4000 tobyqin/devhints jekyll serve
 
-FROM ruby:2.5.1
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update -qq && apt-get install -qq --no-install-recommends \
-    nodejs \
-    yarn \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+FROM jekyll/jekyll:3.8
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
-RUN bundle install
-VOLUME [ "/app" ]
-WORKDIR /app
-EXPOSE 4000
-CMD ["bundle","exec","jekyll","serve"]
+RUN bundle install && rm -rf /usr/local/bundle/cache && rm -rf /home/jekyll/.bundle/cache
+RUN rm Gemfile && rm Gemfile.lock
