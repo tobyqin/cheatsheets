@@ -24,7 +24,7 @@ exclude:
   - node_modules
   - Dockerfile
   - docker_compose.yml
-  - pending
+  - un-sure
 
 # Markdown
 
@@ -53,11 +53,12 @@ defaults:
 
 # Site info
 
-url: https://devhints.io
-title: Devhints.io cheatsheets
+url: https://your.site
+title: Devhints / Cheatsheets
 
 # GitHub metadata
 # https://help.github.com/articles/repository-metadata-on-github-pages/
+
 
 repository: rstacruz/cheatsheets
 host: 0.0.0.0
