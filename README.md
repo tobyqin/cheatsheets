@@ -30,8 +30,11 @@ bundle exec jekyll server
 ## Configuration
 
 > **/_config.yml** : The major config file for the site. 
+>
 > **/_data/content.yml**: The secondary config file for the site. 
+>
 > **/_data/\*.yml**: Not so important configurations. 
+>
 > **/un-sure/\*.md**: The original cheatsheets from devhints.io, put files here to exclude publishing.
 
 ## Deployment 
