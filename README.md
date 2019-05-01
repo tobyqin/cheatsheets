@@ -29,15 +29,16 @@ bundle exec jekyll server
 
 ## Configuration
 
-**/_config.yml** : The major config file for the site.
-**/_data/content.yml**: The secondary config file for the site.
-**/_data/\*.yml**: Not so important configurations.
-**/un-sure/\*.md**: The original cheatsheets from devhints.io, put files here to exclude publishing.
+> **/_config.yml** : The major config file for the site. 
+> **/_data/content.yml**: The secondary config file for the site. 
+> **/_data/\*.yml**: Not so important configurations. 
+> **/un-sure/\*.md**: The original cheatsheets from devhints.io, put files here to exclude publishing.
 
 ## Deployment 
 
-1. Serve with docker, see "Get started"
-2. Trigger build every time your cheatsheets changed, then serve `_output` via IIS or nginx.
+Option 1, Serve with docker, see "Get started".
+
+Option 2, Trigger build every time your cheatsheets changed, then serve `_output` via IIS or nginx.
 
 # License & Credit
 
