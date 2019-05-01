@@ -37,7 +37,6 @@ bundle exec jekyll server
 ## Deployment 
 
 Option 1, Serve with docker, see "Get started".
-
 Option 2, Trigger build every time your cheatsheets changed, then serve `_output` via IIS or nginx.
 
 # License & Credit
