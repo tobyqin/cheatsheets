@@ -53,10 +53,15 @@ defaults:
 
 # Site info
 
-url: https://your.site/hints
+url: https://your.site
 title: Devhints / Cheatsheets
+
+# the top nav edit button link
 repository_url: https://github.com/tobyqin/cheatsheets/blob/master
+
+# the request button name & link in home page
 request_url: https://github.com/tobyqin/cheatsheets/issues/new
+request_name: Ask help
 
 host: 0.0.0.0
 destination: _output #optional

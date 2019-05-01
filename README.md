@@ -1,19 +1,44 @@
-# Devhints
+# Your DevHints
 
-> TL;DR for developer documentation - a ridiculous collection of cheatsheets
+Customize and build your cheatsheets, fork from [devhints.io](https://devhints.io).
 
-[![Status](https://travis-ci.org/rstacruz/cheatsheets.svg?branch=master)](https://travis-ci.org/rstacruz/cheatsheets "See test builds")
+![DevHints](_not_important/screen.png)
 
-<br>
+## Get started
 
-<p align='center'>
-<a href='https://devhints.io/'><img src='_docs/images/screenshot.png' width=600></a>
-<br>
-✨ <b><a href='https://devhints.io/'>devhints.io</a></b> ✨
-</p>
+Docker and git should be installed.
 
-<br>
+```bash
+git clone https://github.com/tobyqin/cheatsheets.git
+cd cheatsheets
+docker run --rm -it -v `pwd`:/srv/jekyll -p 4000:4000 tobyqin/devhints jekyll serve
+```
+Now go to <http://127.0.0.1:4000>, everything is ready. Try to create/edit/remove any cheatsheets (*.md) in root folder, the site will be auto built, refresh the page you will see the changes.
 
----
+The cheatsheets guide: <https://devhints.io/cheatsheet-styles>
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for developer notes.
+### Without docker
+
+You should follow [jekyll installation guide](https://jekyllrb.com/docs/installation/), once jekyll and bundle installed, try:
+
+```bash
+# clone and cd to cheatsheets
+bundle install
+bundle exec jekyll server
+```
+
+## Configuration
+
+**/_config.yml** : The major config file for the site.
+**/_data/content.yml**: The secondary config file for the site.
+**/_data/\*.yml**: Not so important configurations.
+**/un-sure/\*.md**: The original cheatsheets from devhints.io, put files here to exclude publishing.
+
+## Deployment 
+
+1. Serve with docker, see "Get started"
+2. Trigger build every time your cheatsheets changed, then serve `_output` via IIS or nginx.
+
+# License & Credit
+
+MIT, great thanks to [rstacruz/cheatsheets](https://github.com/rstacruz/cheatsheets).

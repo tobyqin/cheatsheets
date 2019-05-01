@@ -41,6 +41,7 @@ not_found:
   description: Sorry, we don't have a cheatsheet for this yet. Try searching!
   home: Back to home
 
+  # can be removed or updated
 announcement:
   id: 2017-10-26-twitter
   title: |
