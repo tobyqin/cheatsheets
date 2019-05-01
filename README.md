@@ -29,7 +29,7 @@ bundle exec jekyll server
 
 ## Configuration
 
-> **/_config.yml** : The major config file for the site. 
+> **/_config.yml** : The major config file for the site, should rerun `jekyll serve` once updated.
 >
 > **/_data/content.yml**: The secondary config file for the site. 
 >
